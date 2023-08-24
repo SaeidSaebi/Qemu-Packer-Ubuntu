@@ -51,8 +51,9 @@ locals {
 source "qemu" "custom_image" {
     vm_name     = "${local.vm_name}"
     
-    iso_url      = "https://releases.ubuntu.com/${var.ubuntu_version}/${var.ubuntu_iso_file}"
-    iso_checksum = "file:https://releases.ubuntu.com/${var.ubuntu_version}/SHA256SUMS"
+    #iso_url      = "https://releases.ubuntu.com/${var.ubuntu_version}/${var.ubuntu_iso_file}"
+     iso_url      = https://releases.ubuntu.com/jammy/ubuntu-22.04.3-live-server-amd64.iso
+    iso_checksum = "a4acfda10b18da50e2ec50ccaf860d7f20b389df8765611142305c0e911d16fd"
 
     # Location of Cloud-Init / Autoinstall Configuration files
     # Will be served via an HTTP Server from Packer
