@@ -64,7 +64,7 @@
     }
   ],
   "variables": {
-    "cpu": "2",
+    "cpu": "1",
     "disk_size": "8000",
     "ram": "2048",
     "domain": "local",
