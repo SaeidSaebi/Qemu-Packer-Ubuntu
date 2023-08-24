@@ -26,9 +26,9 @@ variable "ubuntu_version" {
     type = string
 }
 
-variable "ubuntu_iso_file" {
-    type = string
-}
+#variable "ubuntu_iso_file" {
+#    type = string
+#}
 
 variable "vm_template_name" {
     type = string
