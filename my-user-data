@@ -10,4 +10,5 @@ users:
   shell: /bin/bash
   sudo: [ "ALL=(ALL) ALL" ]
   lock_passwd: false
-  passwd: a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3
+  passwd: $6$SALT$2Tk0xDhcrUXspneK$5rS6izKgHfgxqqt/2rIfqrzA7wqKz6w7QYyIl07QDfxaKGV0iFucu5I1Knm1zCmhnGxuP22i0jsbo96NffVtf1
+
