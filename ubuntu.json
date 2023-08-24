@@ -20,38 +20,7 @@
           "vm_name": "{{user `name`}}{{user `version`}}.qcow2",
           "accelerator": "kvm",
           "use_default_display": true,
-          "qemuargs": [
-              [
-                  "-display",
-                  "gtk"
-              ],
-              [
-                  "-machine",
-                  "accel=kvm"
-              ],
-              [
-                  "-cpu",
-                  "host"
-              ],
-              [
-                "-m",
-                "{{user `ram`}}M"
-              ],
-              [
-                "-smp",
-                "{{user `cpu`}}"
-              ],
-              [
-                  "-fda",
-                  "my-seed.img"
-              ],
-              [
-                  "-serial",
-                  "mon:stdio"
-              ]
-          ]
-      }
-  ],
+          
   "provisioners": [
     {
       "execute_command": "{{ .Vars }} sudo -E bash '{{ .Path }}'",
