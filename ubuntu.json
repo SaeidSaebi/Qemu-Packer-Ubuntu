@@ -20,6 +20,8 @@
           "vm_name": "{{user `name`}}{{user `version`}}.qcow2",
           "accelerator": "kvm",
           "use_default_display": true,
+      }
+        ],
           
   "provisioners": [
     {
@@ -45,5 +47,4 @@
     "ssh_password": "ubuntu",
     "ssh_username": "ubuntu"
   }
-
 }
