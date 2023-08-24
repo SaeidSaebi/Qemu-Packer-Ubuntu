@@ -22,9 +22,9 @@ packer {
 }
 
 ## Variable will be set via the Command line defined under the `vars` directory
-variable "ubuntu_version" {
-    type = string
-}
+#variable "ubuntu_version" {
+#    type = string
+#}
 
 #variable "ubuntu_iso_file" {
 #    type = string
