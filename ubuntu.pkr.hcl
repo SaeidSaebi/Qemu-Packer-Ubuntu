@@ -19,7 +19,6 @@ source "qemu" "ubuntu_iso" {
 
 build {
   sources = ["source.qemu.ubuntu_iso"]
-  ssh_username = "root"
 
   provisioner "shell" {
     inline = [
@@ -27,3 +26,4 @@ build {
     ]
   }
 }
+ssh_username = "root"
