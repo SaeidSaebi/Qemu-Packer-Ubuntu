@@ -13,7 +13,7 @@
           "output_directory": "output-ubuntu",
           "shutdown_command": "echo '{{user `ssh_password`}}' | sudo -t -S /sbin/shutdown -P now",
           "ssh_password": "{{user `ssh_password`}}",
-          "ssh_timeout": "45m",
+          "ssh_timeout": "5m",
           "ssh_username": "{{user `ssh_username`}}",
           "ssh_pty": true,
           "ssh_handshake_attempts": "20",
@@ -42,7 +42,8 @@
       "execute_command": "{{ .Vars }} sudo -E bash '{{ .Path }}'",
       "inline": [
         "sudo apt update 2>&1 >/dev/null",
-        "sudo apt -qq -y install software-properties-common git ansible 2>&1 >/dev/null"
+        "sudo apt -qq -y install software-properties-common git ansible 2>&1 >/dev/null",
+        "sed -i s/ens3/enp1s0/g /etc/netplan/50-cloud-init.yaml"
       ],
       "type": "shell"
     }
