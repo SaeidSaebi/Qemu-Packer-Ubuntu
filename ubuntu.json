@@ -45,7 +45,7 @@
     "iso_url": "https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64.img",
     "name": "ubuntu",
     "version": "2004",
-    "ssh_password": "123",
+    "ssh_password": "1234@qwer",
     "ssh_username": "saeid"
   }
 }

@@ -1,6 +1,6 @@
 #cloud-config
-password: 123
-ssh_pwauth: true
+password: 1234@qwer
+ssh_pwauth: True
 chpasswd:
   expire: false
 
