@@ -39,17 +39,16 @@ source "qemu" "ubuntu-2004-amd64-qemu" {
   ssh_timeout       = "60m"
 }
 
-build {
-  sources = ["source.qemu.ubuntu-2004-amd64-qemu"]
+#build {
+#  sources = ["source.qemu.ubuntu-2004-amd64-qemu"]
 
-  provisioner "file" {
-    sources     = [ "provisioning/first-config",
-                    "provisioning/second-config"]
-    destination = "/home/ubuntu/"
-  }
+  #provisioner "file" {
+  #  sources     = [ "provisioning/first-config",
+  #                  "provisioning/second-config"]
+  #  destination = "/home/ubuntu/"
+  #}
 
-  provisioner "shell" {
-    script          = "provisioning/init.sh"
-    execute_command = "sudo bash {{.Path}}"
-  }
-}
+  #provisioner "shell" {
+  #  script          = "provisioning/init.sh"
+  #  execute_command = "sudo bash {{.Path}}"
+  #}}
