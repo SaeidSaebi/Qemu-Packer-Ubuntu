@@ -1,3 +1,26 @@
+"builders": [
+    {
+      "type": "qemu",
+      "iso_checksum": "{{user `iso_checksum`}}",
+      "iso_url": "{{user `iso_url`}}",
+      "disk_size": "{{user `disk_size`}}",
+      "disk_image": true,
+      "format": "qcow2",
+      "disk_compression": true,
+      "headless": false,
+      "output_directory": "output-ubuntu",
+      "shutdown_command": "echo '{{user `ssh_password`}}' | sudo -t -S /sbin/shutdown -P now",
+      "ssh_password": "{{user `ssh_password`}}",
+      "ssh_timeout": "45m",
+      "ssh_username": "{{user `ssh_username`}}",
+      "ssh_pty": true,
+      "ssh_handshake_attempts": "20",
+      "vm_name": "{{user `name`}}{{user `version`}}.qcow2",
+      "accelerator": "kvm",
+      "use_default_display": true,
+      "vnc_bind_address": "0.0.0.0"
+    }
+  ],
 source "qemu" "ubuntu-2004-amd64-qemu" {
   vm_name           = "ubuntu-2004-amd64-qemu-build"
   iso_url           = "https://releases.ubuntu.com/focal/ubuntu-20.04.6-live-server-amd64.iso"
