@@ -15,6 +15,20 @@ source "qemu" "ubuntu_iso" {
     "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg",
     "-- <enter>"
   ]
+  boot_wait = "5s"
+
+    # QEMU specific configuration
+    cpus             = 1
+    memory           = 2048
+    accelerator      = "kvm" # use none here if not using KVM
+    disk_size        = "10G"
+    disk_compression = true
+    # SSH configuration so that Packer can log into the Image
+    ssh_password    = "packerubuntu"
+    ssh_username    = "admin"
+    ssh_timeout     = "20m"
+    shutdown_command = "echo 'packerubuntu' | sudo -S shutdown -P now"
+    headless        = false # NOTE: set this to true when using in CI Pipelines
 }
 
 build {
