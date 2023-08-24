@@ -56,7 +56,7 @@
     "iso_checksum": "f16a309ec62e7abb89aa577e9b0a0523c4c2a439ed132e68cf22c00c07d90b67",
     "iso_url": "https://cloud-images.ubuntu.com/jammy/20230816/jammy-server-cloudimg-amd64.img",
     "name": "ubuntu",
-    "version": "2004",
+    "version": "22",
     "ssh_password": "ubuntu",
     "ssh_username": "ubuntu"
   }
