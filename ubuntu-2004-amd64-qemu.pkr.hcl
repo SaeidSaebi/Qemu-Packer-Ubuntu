@@ -1,4 +1,4 @@
-"builders": [
+builders: [
     {
       "type": "qemu",
       "iso_checksum": "{{user `iso_checksum`}}",
