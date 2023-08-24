@@ -9,7 +9,7 @@
       "disk_image": true,
       "format": "qcow2",
       "disk_compression": true,
-      "headless": true,
+      "headless": false,
       "output_directory": "output-ubuntu",
       "shutdown_command": "echo '{{user `ssh_password`}}' | sudo -t -S /sbin/shutdown -P now",
       "ssh_password": "{{user `ssh_password`}}",
@@ -20,6 +20,7 @@
       "vm_name": "{{user `name`}}{{user `version`}}.qcow2",
       "accelerator": "kvm",
       "use_default_display": true
+      "vnc_bind_address": "0.0.0.0",
     }
   ],
 
