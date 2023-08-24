@@ -26,4 +26,3 @@ build {
     ]
   }
 }
-ssh_username = "root"
