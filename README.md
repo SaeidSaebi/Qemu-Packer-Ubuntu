@@ -54,3 +54,4 @@ see the `late-commands` in the `user-data` file. This is determined by installin
 image and performing `sudo efibootmgr`. This lists what are the sequences and when should the image be booted.
 
 [1]: https://shantanoo-desai.github.io/posts/technology/packer-ubuntu-qemu/
+[2]
