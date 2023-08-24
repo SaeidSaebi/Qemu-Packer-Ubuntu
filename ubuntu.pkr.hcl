@@ -1,7 +1,7 @@
 source "qemu" "ubuntu_iso" {
   iso_url   = "https://releases.ubuntu.com/jammy/ubuntu-22.04.3-live-server-amd64.iso" 
   iso_checksum = "sha256:a4acfda10b18da50e2ec50ccaf860d7f20b389df8765611142305c0e911d16fd"          
-  format    = "iso"
+  format    = "qcow2"
   boot_command = [
     "<enter><wait>",
     "/install/vmlinuz",
@@ -19,6 +19,7 @@ source "qemu" "ubuntu_iso" {
 
 build {
   sources = ["source.qemu.ubuntu_iso"]
+  ssh_username = "root"
 
   provisioner "shell" {
     inline = [
