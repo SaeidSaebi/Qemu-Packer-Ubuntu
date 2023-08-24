@@ -46,10 +46,5 @@ source "qemu" "ubuntu-2004-amd64-qemu" {
       sources     = [ "provisioning/first-config",
                       "provisioning/second-config"]
       destination = "/home/ubuntu/"
-    }
-  
-    provisioner "shell" {
-      script          = "provisioning/init.sh"
-      execute_command = "sudo bash {{.Path}}"
-    }
+    } 
   }
