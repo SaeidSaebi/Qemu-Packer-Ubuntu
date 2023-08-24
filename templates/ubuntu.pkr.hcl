@@ -70,10 +70,10 @@ source "qemu" "custom_image" {
     boot_wait = "5s"
 
     # QEMU specific configuration
-    cpus             = 4
-    memory           = 4096
+    cpus             = 1
+    memory           = 1024
     accelerator      = "kvm" # use none here if not using KVM
-    disk_size        = "30G"
+    disk_size        = "8G"
     disk_compression = true
 
     efi_firmware_code = "/usr/share/OVMF/${lookup(local.ovmf_prefix, var.host_distro, "")}OVMF_CODE.fd"
