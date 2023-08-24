@@ -41,10 +41,4 @@ source "qemu" "ubuntu-2004-amd64-qemu" {
   
   build {
     sources = ["source.qemu.ubuntu-2004-amd64-qemu"]
-  
-    provisioner "file" {
-      sources     = [ "provisioning/first-config",
-                      "provisioning/second-config"]
-      destination = "/home/ubuntu/"
-    } 
   }
