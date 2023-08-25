@@ -6,7 +6,7 @@ chpasswd:
 
 users:
 - default
-- name: saeid
+- name: xavki
   shell: /bin/bash
   sudo: [ "ALL=(ALL) ALL" ]
   lock_passwd: false
